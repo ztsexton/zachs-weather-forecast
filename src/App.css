@@ -1,0 +1,117 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.forecasts {
+  display: flex;
+  flex-wrap: wrap;  /* Allows items to wrap to the next line */
+  gap: 20px;        /* Adds space between the cards */
+  justify-content: center; /* Centers the cards horizontally */
+  padding: 20px;    /* Padding around the entire container */
+}
+
+.daily-forecast {
+  width: 280px;
+  background-color: #f9f9f9; /* Light grey background for the card */
+  color: #333; /* Darker text color for readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside each card */
+  min-width: 200px; /* Minimum width of each card */
+  max-width: 300px; /* Maximum width of each card */
+  margin: 10px; /* Margin around each card */
+  display: flex;
+  flex-direction: column; /* Organizes content in a column */
+  justify-content: space-between; /* Distributes space evenly */
+  color: #333; /* Adjust if needed for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.daily-forecast:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow for a "lifting" effect */
+}
+
+.daily-forecast::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white overlay */
+  border-radius: 10px;
+  z-index: 1; /* Lower z-index */
+}
+
+
+.daily-forecast h3 {
+  /* Adjust this value as needed */
+  margin: 0 0 15px;
+  font-size: 1.4em; /* Slightly larger font for the heading */
+}
+
+.daily-forecast .date {
+  font-size: 0.9em; /* Smaller font for the date */
+  color: #666666; /* Lighter color for the date */
+  margin-bottom: 10px;
+}
+
+.daily-forecast .temperature {
+  font-size: 1.5em; /* Larger font for temperature */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.daily-forecast .summary {
+  font-size: 0.9em;
+  color: #555555;
+}
+
+.weather-icon {
+  margin-bottom: 15px; /* Space below the icon */
+  /* Adjust width and height as needed */
+  width: 40px;
+  height: 40px;
+}
